@@ -38,6 +38,10 @@ Your build file may already include one or both of these, if this is the case on
 	protected:	   
 		/** Allows for the keyboard focus to be assigned to the widget */  
 		virtual bool SupportsKeyboardFocus() const override { return true; };
+	  
+	public:  
+		/** Weak pointer to the HUD class that owns the menu */  
+		TWeakObjectPtr<class AMainHUD> OwningHud;
 	};
 ```
 
@@ -66,7 +70,7 @@ Your build file may already include one or both of these, if this is the case on
 				.Font(FSlateFontInfo("Verdana", 16))  
 				.ColorAndOpacity(FColor::Red)
 			]
-		]
+		];
 	}
 	END_SLATE_FUNCTION_BUILD_OPTIMIZATION
 ```
@@ -113,7 +117,7 @@ To Use slate within your game a HUD class is first required. HUD classes
 	{
 		if (GEngine && GEngine->GameViewport)  
 		{
-			HUDWidget = SNew(SHUDWidget).OwningHud(this).debug(bDebug);  
+			HUDWidget = SNew(SHUDWidget).OwningHud(this);  
 			  
 			GEngine->GameViewport->AddViewportWidgetContent(SAssignNew(HUDWidgetContainer, SWeakWidget).PossiblyNullContent(HUDWidget.ToSharedRef()));  
 			  
