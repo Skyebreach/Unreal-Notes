@@ -1,4 +1,8 @@
-Based off the C++ smart pointers
+Based off the C++ smart pointers.
+- Can forward declare to incomplete types
+- Not compatible with UObjects
+- Shared pointers are non-intrusive, which means the object does not know whether or not a Smart Pointer owns it.
+- Dynamic casting is not supported, so static casting should be used.
 
 # Benefits
 | Benefit                | Description                                                                                                                                                                                        |
@@ -35,3 +39,28 @@ Based off the C++ smart pointers
 > Making a Shared Pointer or Shared Reference to an object that a Unique Pointer references is dangerous. This will not suspend the Unique Pointer's behavior of deleting the object upon its own destruction, even though other Smart Pointers still reference it. 
 > 
 > Similarly, you should not make a Unique Pointer to an object that is referenced by a Shared Pointer or Shared Reference
+
+# Speed
+Smart ptrs are slower than raw C++ ptrs, so are less useful for low-level engine code
+
+## Benefits
+- All operations are constant time.
+- Dereferencing most Smart Pointers is just as fast as raw C++ pointers (in shipping builds).
+- Copying Smart Pointers never allocates memory.
+- Thread-safe Smart Pointers are lockless.
+
+## Drawbacks
+- Creating and copying Smart Pointers involves more overhead than creating and copying raw C++ pointers.
+- Maintaining reference counts adds cycles to basic operations.
+- Some Smart Pointers use more memory than raw C++ pointers.
+- There are two heap allocations for reference controllers. Using `MakeShared` instead of `MakeShareable` avoids the second allocation, and can improve performance.
+
+# Thread Safety
+By default are only thread safe for a single thread. 
+Thread safety over multiple threads can be achieved by using the thread safe versions. Using shared ptr as an example,
+```cpp
+	TSharedPtr<T, ESPMode::ThreadSafe> 
+```
+These are slower but are consistant with regular C++ ptrs:
+- Reads and copies are always thread-safe.  
+- Writes and resets must be synchronized to be safe.
