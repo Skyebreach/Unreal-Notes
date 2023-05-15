@@ -156,20 +156,54 @@ The full code for this widget is shown here
 	END_SLATE_FUNCTION_BUILD_OPTIMIZATION
 ```
 
-
-## Structure
-
- 
 # HUD Setup
 ## Creating the HUD Class
-- Creating the hud class
-- Setting HUD Class as the defualt class
-- Widget Ptr
-- Container Ptr
-- Creation of widget
-- Assignment to viewport
-- Input Mode
-To Use slate within your game a HUD class is first required. HUD classes 
+To use this slate widget in game we need to assign it to the viewport through the HUD class. We will not go through what a [[HUD Class]] fully does here, but it simply stores player ui data and controls the players viewport. After the creation of the HUD class we need to include our widget class,
+```CPP
+	#include "SHUDWidget.h"  
+```
+Inside the class we will override the BeginPlay function and add a function that will be used to display our widget,
+```CPP
+	protected:  
+		virtual void BeginPlay() override;
+
+	public:
+		void DisplayMainHud();
+```
+Aswell as this we will need to add shared pointers to our hudwidget and the generic widget as a container,
+```CPP
+	protected:  
+		TSharedPtr<class SHUDWidget> HUDWidget;  
+		TSharedPtr<class SWidget> HUDWidgetContainer;
+```
+We now move onto the cpp file for the HUD, firstly we need to call our display function from BeginPlay so our HUD shows on the games start,
+```CPP
+	void AMainHUD::BeginPlay()  
+	{  
+		DisplayMainHud() 
+	}
+```
+Inside our display function we need to create our hud widget and assign it to the viewport,
+```CPP
+	void AMainHUD::DisplayMainHud() 
+	{
+		if (GEngine && GEngine->GameViewport)  
+		{
+			HUDWidget = SNew(SHUDWidget).OwningHud(this);  
+			  
+			GEngine->GameViewport->AddViewportWidgetContent(SAssignNew(HUDWidgetContainer, SWeakWidget).PossiblyNullContent(HUDWidget.ToSharedRef()));  
+		}
+	}
+```
+Here we have create the widget and assigned the owning hud to the hud class. We then apply our widget to the viewport via assigning our container to it and setting our widget to its attribute. The SAssignNew used here creates a pointer reference to the container, this can be used for all slate widgets instead of SNew. This is all thats needed to display our widget but normally we need to go on step further and tell the player controller what type of ui we have open. To do this we use
+```CPP
+	if (PlayerOwner)  
+		PlayerOwner->SetInputMode(FInputModeGameOnly());
+```
+Here we are using the gameonly input mode there are others to see these head to [[Input Modes]]. We have now fully created our widget and assigned it to our huds viewport, however the gamemode needs to be instructed to use the HUD, we do this by defining the HUDClass inside the gamemode.cpp,
+```CPP
+	HUDClass = AMainHUD::StaticClass();  
+```
 
 ## Full Code
 **AMainHUD.h**
@@ -220,7 +254,28 @@ To Use slate within your game a HUD class is first required. HUD classes
 			GEngine->GameViewport->AddViewportWidgetContent(SAssignNew(HUDWidgetContainer, SWeakWidget).PossiblyNullContent(HUDWidget.ToSharedRef()));  
 			  
 			if (PlayerOwner)  
-				PlayerOwner->SetInputMode(FInputModeGameAndUI());
+				PlayerOwner->SetInputMode(FInputModeGameOnly());
 		}
 	}
+```
+
+**gamemode.cpp**
+```CPP
+  
+#include "BasicSlateTutorialGameMode.h"  
+#include "BasicSlateTutorialCharacter.h"  
+#include "MainHUD.h"  
+#include "UObject/ConstructorHelpers.h"  
+  
+ABasicSlateTutorialGameMode::ABasicSlateTutorialGameMode()  
+{  
+	HUDClass = AMainHUD::StaticClass();  
+	  
+	// set default pawn class to our Blueprinted character  
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter"));  
+	if (PlayerPawnBPClass.Class != NULL)  
+	{  
+		DefaultPawnClass = PlayerPawnBPClass.Class;  
+	}  
+}
 ```
