@@ -1,6 +1,6 @@
 # Slate Setup
 Live coding should be turned off when working with slate (and in general imo) as it can cause bugs, editor crashes, and can cause the ui elements to not be hot reloaded.  To do this follow `Edit > Editor Preferences > Live Coding` and make sure the "Enable Live Coding" button is turned off as such
-![[LiveCodingOff.png]]
+![[Pasted image 20230515223837.png]]
 Before you can work with Slate UI you must add the required dependancies,
 ```CSharp
 	PrivateDependencyModuleNames.AddRange(new string[] {  
