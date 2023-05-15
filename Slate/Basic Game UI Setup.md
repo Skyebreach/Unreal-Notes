@@ -9,18 +9,28 @@ Before you can work with Slate UI you must add the required dependancies,
 	});
 ```
 
-Your build file may already include one or both of these, if this is the case only add the packages that are absent.
+Your build file may already include one or both of these, if this is the case only add the packages that are absent. 
 
 # Basic Widget Setup
+Here we will use the third person example project as a back bone for our hello world widget
 
 ## Creating your first slate class
-
+- Args
+	- Owning hud
+- Child slots
+	- Constraint Canvas
+	- Slots
+	- Text block
 
 ## Full Code
 **SHUDWidget.h**
 ```CPP
 	#include "CoreMinimal.h"  
-	#include "Widgets/SCompoundWidget.h"
+	#include "Widgets/SCompoundWidget.h"  
+	#include "Widgets/Layout/SConstraintCanvas.h"  
+	  
+	#include "SlateBasics.h"  
+	#include "SlateExtras.h"
 	
 	class MYPROJECT_API SHUDWidget : public SCompoundWidget  
 	{  
@@ -47,30 +57,36 @@ Your build file may already include one or both of these, if this is the case on
 
 **SHUDWidget.cpp**
 ```CPP
+	#include "SHUDWidget.h"  
+	#include "SlateOptMacros.h"
+
 	BEGIN_SLATE_FUNCTION_BUILD_OPTIMIZATION  
 	void SHUDWidget::Construct(const FArguments& InArgs)  
-	{
-		bCanSupportFocus = true;
-		OwningHud = InArgs._OwningHud;
-
+	{  
+		bCanSupportFocus = true;  
+		OwningHud = InArgs._OwningHud;  
+		  
+		FSlateFontInfo font = FCoreStyle::Get().GetFontStyle("EmbossedText");  
+		font.Size = 20.f;  
+		  
 		ChildSlot  
 		.HAlign(HAlign_Fill)  
 		.VAlign(VAlign_Fill)  
-		[
+		[  
 			SNew(SConstraintCanvas)  
-			// Top Left Screen Alignment    
+			// Top Left Screen Alignment  
 			+ SConstraintCanvas::Slot()  
 			.AutoSize(true)  
 			.Anchors(FAnchors(0, 0))  
 			.Alignment(FVector2D(0,0))  
-			[
+			[  
 				SNew(STextBlock)  
 				.Text(FText::FromString("Hello World"))  
-				.Justification(ETextJustify::Center)
-				.Font(FSlateFontInfo("Verdana", 16))  
-				.ColorAndOpacity(FColor::Red)
-			]
-		];
+				.Justification(ETextJustify::Center)  
+				.Font(font)  
+				.ColorAndOpacity(FColor::Red)  
+			]  
+		];  
 	}
 	END_SLATE_FUNCTION_BUILD_OPTIMIZATION
 ```
@@ -80,11 +96,23 @@ Your build file may already include one or both of these, if this is the case on
 ## Creating the HUD Class
 - Creating the hud class
 - Setting HUD Class as the defualt class
+- Widget Ptr
+- Container Ptr
+- Creation of widget
+- Assignment to viewport
+- Input Mode
 To Use slate within your game a HUD class is first required. HUD classes 
 
 ## Full Code
 **AMainHUD.h**
-```CPP	  
+```CPP	 
+	#include "CoreMinimal.h"  
+	#include "GameFramework/HUD.h"  
+	  
+	#include "SHUDWidget.h"  
+	  
+	#include "MainHUD.generated.h"
+
 	UCLASS()  
 	class MYPROJECT_API AMainHUD : public AHUD  
 	{  
@@ -106,6 +134,8 @@ To Use slate within your game a HUD class is first required. HUD classes
 
 **AMainHUD.cpp**
 ```CPP
+	#include "MainHUD.h"
+
 	AMainHUD::AMainHUD() {}
 
 	void AMainHUD::BeginPlay()  
