@@ -12,6 +12,10 @@ Before you can work with Slate UI you must add the required dependancies,
 Your build file may already include one or both of these, if this is the case only add the packages that are absent.
 
 # Basic Widget Setup
+
+## Creating your first slate class
+
+
 ## Full Code
 **SHUDWidget.h**
 ```CPP
@@ -67,10 +71,11 @@ Your build file may already include one or both of these, if this is the case on
 	END_SLATE_FUNCTION_BUILD_OPTIMIZATION
 ```
 
-## Creating the HUD
-To Use slate within your game a HUD class is first required. HUD classes 
  
 # HUD Setup
+## Creating the HUD Class
+To Use slate within your game a HUD class is first required. HUD classes 
+
 ## Full Code
 **AMainHUD.h**
 ```CPP	  
