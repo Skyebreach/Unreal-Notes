@@ -94,7 +94,6 @@ Slots are only used in conjugtion with SPanels, and they allow for the extension
 Here we create a new text block inside the slot that prints hello world on the screen. The text blocks arguments are self explanitory so wont be expanded on here.
 
 ## Full Code
-The full code for this widget is shown here
 **SHUDWidget.h**
 ```CPP
 	#include "SlateBasics.h"  
