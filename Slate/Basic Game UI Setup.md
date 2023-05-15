@@ -74,6 +74,8 @@ Your build file may already include one or both of these, if this is the case on
  
 # HUD Setup
 ## Creating the HUD Class
+- Creating the hud class
+- Setting HUD Class as the defualt class
 To Use slate within your game a HUD class is first required. HUD classes 
 
 ## Full Code
