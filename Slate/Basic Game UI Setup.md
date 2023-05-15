@@ -1,4 +1,5 @@
 # Slate Setup
+Before you can work with Slate UI you must add the required dependancies,
 ```CSharp
 	PrivateDependencyModuleNames.AddRange(new string[] {  
 		"Slate",  
@@ -6,7 +7,10 @@
 	});
 ```
 
+Your build file may already include one or both of these, if this is the case only add the packages that are absent.
+
 # Basic Widget Setup
+## Full Code
 **SHUDWidget.h**
 ```CPP
 	#include "CoreMinimal.h"  
@@ -61,7 +65,11 @@
 	END_SLATE_FUNCTION_BUILD_OPTIMIZATION
 ```
 
+## Creating the HUD
+To Use slate within your game a HUD class is first required. HUD classes 
+ 
 # HUD Setup
+## Full Code
 **AMainHUD.h**
 ```CPP	  
 	UCLASS()  
