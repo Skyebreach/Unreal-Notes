@@ -57,7 +57,7 @@ Your build file may already include one or both of these, if this is the case on
 			.Alignment(FVector2D(0,0))  
 			[
 				SNew(STextBlock)  
-				.Text(FText::FromString("Debug Text"))  
+				.Text(FText::FromString("Hello World"))  
 				.Justification(ETextJustify::Center)
 				.Font(FSlateFontInfo("Verdana", 16))  
 				.ColorAndOpacity(FColor::Red)
