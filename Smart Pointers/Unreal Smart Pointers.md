@@ -29,5 +29,9 @@ Based off the C++ smart pointers
 - Solely owns the object 
 - Can transfer ownership but not share it
 - result in compiler error when attempting to copy it
--  Deletes itself when out of scope
-  
+- Deletes itself when out of scope
+
+> [!warning]
+> Making a Shared Pointer or Shared Reference to an object that a Unique Pointer references is dangerous. This will not suspend the Unique Pointer's behavior of deleting the object upon its own destruction, even though other Smart Pointers still reference it. 
+> 
+> Similarly, you should not make a Unique Pointer to an object that is referenced by a Shared Pointer or Shared Reference
