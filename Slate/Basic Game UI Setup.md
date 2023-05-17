@@ -157,7 +157,7 @@ Here we create a new text block inside the slot that prints hello world on the s
 
 # HUD Setup
 ## Creating the HUD Class
-To use this slate widget in game we need to assign it to the viewport through the HUD class. We will not go through what a [[HUD Class]] fully does here, but it simply stores player ui data and controls the players viewport. After the creation of the HUD class we need to include our widget class,
+To use this slate widget in game we need to assign it to the viewport through the HUD class. We will not go through what a [[HUD]] fully does here, but it simply stores player ui data and controls the players viewport. After the creation of the HUD class we need to include our widget class,
 ```CPP
 	#include "SHUDWidget.h"  
 ```
