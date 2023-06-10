@@ -1,0 +1,14 @@
+{
+  "livePreview": false,
+  "attachmentFolderPath": "Source/Images",
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "foldHeading": true,
+  "showInlineTitle": false,
+  "showLineNumber": false,
+  "autoPairBrackets": false,
+  "alwaysUpdateLinks": true,
+  "focusNewTab": true,
+  "showUnsupportedFiles": true
+}

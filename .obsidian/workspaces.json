@@ -1,0 +1,164 @@
+{
+  "workspaces": {
+    "Good sauce": {
+      "main": {
+        "id": "ac0dbae927c3da56",
+        "type": "split",
+        "children": [
+          {
+            "id": "0419fa951fbe6646",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4bf9ba8e5318a7f7",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Project Hecate.md",
+                    "mode": "preview",
+                    "source": true
+                  },
+                  "pinned": true
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "ab7bf2d614f84920",
+        "type": "split",
+        "children": [
+          {
+            "id": "e075fe9f45eb87ca",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1f3fce29f28cb123",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "9287faead9f2ad41",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "937900f8e7767a02",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200
+      },
+      "right": {
+        "id": "0d172a9ebe449f5f",
+        "type": "split",
+        "children": [
+          {
+            "id": "e9b41c2fb35ce807",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "17e46c08ddf9f7d1",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Project Hecate.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "e932f45f0240ffbc",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Project Hecate.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "1464c12f4f9ad938",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": false
+                  }
+                }
+              },
+              {
+                "id": "e9716a4f586bc526",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Project Hecate.md"
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "homepage:Open homepage": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "canvas:Create new canvas": false,
+          "daily-notes:Open today's daily note": true,
+          "templates:Insert template": false,
+          "command-palette:Open command palette": true,
+          "obsidian-excalidraw-plugin:Create new drawing": true,
+          "obsidian-leaflet-plugin:Open Leaflet Map": false,
+          "templater-obsidian:Templater": false,
+          "table-editor-obsidian:Advanced Tables Toolbar": true,
+          "workspaces:Manage workspace layouts": false
+        }
+      },
+      "active": "4bf9ba8e5318a7f7"
+    }
+  },
+  "active": "Good sauce"
+}

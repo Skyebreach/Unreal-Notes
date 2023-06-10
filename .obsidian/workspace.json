@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "ac0dbae927c3da56",
+    "type": "split",
+    "children": [
+      {
+        "id": "597d3dd3fa071e56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fb9d3279a61a4ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ab7bf2d614f84920",
+    "type": "split",
+    "children": [
+      {
+        "id": "e075fe9f45eb87ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f3fce29f28cb123",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9287faead9f2ad41",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#subsystem",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "937900f8e7767a02",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "0d172a9ebe449f5f",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9b41c2fb35ce807",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17e46c08ddf9f7d1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Home.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e932f45f0240ffbc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1464c12f4f9ad938",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "e9716a4f586bc526",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Home.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": true,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "homepage:Open homepage": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-rich-links:Rich Links": false
+    }
+  },
+  "active": "7fb9d3279a61a4ee",
+  "lastOpenFiles": [
+    "README.md",
+    "Main/Smart Pointers/Smart Pointers Landing.md",
+    "Home.md",
+    "Projects/General/Unreal Research Notes/Home.md",
+    "Projects/Games/Project Hecate/Home.md",
+    "Projects/Coding/Twitch Bot/Test Landing.md",
+    "Todo/test.md",
+    "Todo",
+    "Projects/General/null/Home.md",
+    "Projects/General/null/Templates/Kanban Template.md",
+    "Projects/General/null/Templates/System Landing Page Template.md",
+    "Projects/General/null/Templates/General Template.md",
+    "Projects/General/null/Main",
+    "Projects/General/null/Templates",
+    "Projects/General/null/Imgs",
+    "Projects/General/null",
+    "Projects/Games/Laser quantum computer puzzle game/Templates/System Landing Page Template.md",
+    "Projects/Games/Laser quantum computer puzzle game/Templates/Kanban Template.md",
+    "Projects/Games/Laser quantum computer puzzle game/Templates/General Template.md",
+    "Projects/Games/Laser quantum computer puzzle game/Main",
+    "Projects/Games/Laser quantum computer puzzle game/Templates",
+    "Projects/Games/Laser quantum computer puzzle game/Imgs",
+    "Projects/Games/Laser quantum computer puzzle game/Home.md",
+    "Projects/Games/Laser quantum computer puzzle game",
+    "Projects/Games/twitch Game/Templates/System Landing Page Template.md",
+    "Projects/Games/twitch Game/Templates/Kanban Template.md",
+    "Projects/Games/twitch Game/Templates/General Template.md",
+    "Projects/Games/twitch Game/Templates",
+    "Projects/Games/twitch Game/Home.md",
+    "Projects/Games/ idle game/Templates/System Landing Page Template.md",
+    "Projects/Games/ idle game/Templates/Kanban Template.md",
+    "Projects/Games/ idle game/Templates/General Template.md",
+    "Projects/Games/ idle game/Home.md",
+    "Projects/Games/HVac sim/Templates/System Landing Page Template.md",
+    "Projects/Games/HVac sim/Templates/Kanban Template.md",
+    "Projects/Games/HVac sim/Templates/General Template.md",
+    "Vault Templates/Unreal Research Notes/Imgs/LiveCodingTurnOff.png",
+    "Vault Templates/Unreal Research Notes/Imgs/unreal52Banner.png",
+    "Projects/General/Twitch Bot/Twitch Bot/Design/Event driven websocket/Flow.canvas",
+    "Projects/General/Twitch Bot/Twitch Bot/Design/Architecture.canvas",
+    "Projects/General/Twitch Bot/skye-net V2/skye-net-react-app/node_modules/@jest/core/build/assets/jest_logo.png",
+    "Projects/General/Twitch Bot/skye-net V1/node_modules/flatted/flatted.jpg",
+    "Projects/General/Twitch Bot/Design Vault/Design/Event driven websocket/Flow.canvas",
+    "Projects/General/Twitch Bot/Design Vault/Design/Architecture.canvas",
+    "Projects/Games/Project Arthurian/Design/Programmatic Design Vault/Source/imgs/Pasted image 20230422113935.png",
+    "Projects/Games/Project Arthurian/Design/Programmatic Design Vault/Source/imgs/Pasted image 20230422113233.png",
+    "Projects/Games/Project Arthurian/Design/Programmatic Design Vault/Design/Architecture map.canvas",
+    "Projects/Games/Project Arthurian/Design/Lore And Game Deisgn Vault/Source/Images/VDf.jpg",
+    "Projects/Games/Project Arthurian/Design/Lore And Game Deisgn Vault/Source/Images/Middle Guard.png",
+    "Projects/Games/Project Arthurian/Design/Lore And Game Deisgn Vault/Source/Images/Low Guard.png",
+    "Projects/Games/Project Arthurian/Design/Lore And Game Deisgn Vault/Source/Images/index.jpg",
+    "Untitled.canvas",
+    "Old Design/Player/Player Inventory and Loadout (PIL)/PIL UI.canvas",
+    "Design/Inventory/Player Inventory and Loadout/UI/Untitled.canvas"
+  ]
+}

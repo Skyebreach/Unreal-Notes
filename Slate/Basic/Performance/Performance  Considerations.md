@@ -1,5 +1,0 @@
-# CPU Performance
-
-
-# GPU Performance
-
